@@ -77,3 +77,63 @@
 // output 2:
 // No Course found
 // No Course found with mentioned attributes.
+
+class Course
+{
+    private int id, quiz, handson;
+    private String courseName, courseAdmin;
+
+    public Course(int id, String courseName, String courseAdmin, int quiz, int handson)
+    {
+        this.id = id;
+        this.courseName = courseName;
+        this.courseAdmin = courseAdmin;
+        this.quiz = quiz;
+        this.handson = handson;
+    }
+
+    public int get_cId()
+    {
+        return id;
+    }
+    public void set_cId(int id)
+    {
+        this.id = id;
+    }
+
+    public String get_courseName()
+    {
+        return courseName;
+    }
+    public void set_courseName(String courseName)
+    {
+        this.courseName = courseName;
+    }
+
+    public String get_courseAdmin()
+    {
+        return courseAdmin;
+    }
+    public void set_courseAdmin(String courseAdmin)
+    {
+        this.courseAdmin = courseAdmin;
+    }
+
+    public int get_Quiz()
+    {
+        return quiz;
+    }
+    public void set_Quiz(int quiz)
+    {
+        this.quiz = quiz;
+    }
+
+    public int get_handson()
+    {
+        return handson;
+    }
+    public void set_handson(int handson)
+    {
+        this.handson = handson;
+    }
+}
