@@ -17,36 +17,35 @@ import java.util.Scanner;
 public class IPA_MockProblem1 {
 
         public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-    
             // Reading 5 integer values into an array
-            int[] arr = new int[5];
-            for (int i = 0; i < 5; i++) {
-                arr[i] = scanner.nextInt();
-            }
-    
-            // Reading limit1 and limit2
-            int limit1 = scanner.nextInt();
-            int limit2 = scanner.nextInt();
-    
-            // Calculating the sum and count of values within the range
-            int sum = 0;
-            int count = 0;
-    
-            for (int num : arr) {
-                if (num > limit1 && num < limit2) {
-                    sum += num;
-                    count++;
+            try (Scanner scanner = new Scanner(System.in)) {
+                // Reading 5 integer values into an array
+                int[] arr = new int[5];
+                for (int i = 0; i < 5; i++) {
+                    arr[i] = scanner.nextInt();
                 }
+                
+                // Reading limit1 and limit2
+                int limit1 = scanner.nextInt();
+                int limit2 = scanner.nextInt();
+                
+                // Calculating the sum and count of values within the range
+                int sum = 0;
+                int count = 0;
+                
+                for (int num : arr) {
+                    if (num > limit1 && num < limit2) {
+                        sum += num;
+                        count++;
+                    }
+                }
+                
+                // Calculating the average as an integer
+                int average = (count > 0) ? (sum / count) : 0;
+                
+                // Printing the result
+                System.out.println(average);
             }
-    
-            // Calculating the average as an integer
-            int average = (count > 0) ? (sum / count) : 0;
-    
-            // Printing the result
-            System.out.println(average);
-    
-            scanner.close();
         }
      
 }
